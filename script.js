@@ -23,6 +23,7 @@ let upperChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 let lowerChars = 'abcdefghijklmnopqrstuvwxyz';
 let num = '0123456789';
 let allsymbols = '!@#$%^&*~'
+
 function generatePassword(){
     let genPassword = "";
     let allChars = "";
@@ -42,7 +43,7 @@ function generatePassword(){
 copyIcon.addEventListener('click', () => {
     if(passBox.value !== "" || passBox.value.length >=3){
         navigator.clipboard.writeText(passBox.value)
-        copyIcon.innerHTML = "checked";  //  after generating password just check 
+        copyIcon.innerHTML = '✔ ';  //  after generating password just check 
         copyIcon.title = "Password Copied";
 
         setTimeout(() => {
